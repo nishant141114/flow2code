@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+             
+           
+            <div  style=" height:fit-content; width:200px;  align-items: center;" id="flow">
+           <div style="width:fit-content;" id="1">
+            <img src="main.png" alt="" style="width: 100px; height:50px;">
+     
+           </div>
+           <img src="down-arrow.png" alt="" id= "300" style="width: 80px; height:70px;" onclick="openPopup(this.id)">
+               
+               
+                <div style="width:fit-content;" id="299">
+                    <img src="end.png" alt="" style="width: 100px; height:50px;">
+                </div>
+            
+
+            </div>
+            <div class="popup" id="popup">
+
+
+                
+              <table style="height:480px ; width: 500px; background-color: aliceblue;"> 
+                <tr>
+                    <th>Variables</th>
+                    <th>input/output</th>
+                    <th>Condition</th>
+                    <th>loop</th>
+                </tr>
+                <tr>
+                    <td> <img src="declare.png" alt="" style="width:100px; height:50px" onclick="addTag(1), closePopup()"></td>
+                    <td> <img src="input.png" alt="" style="width:100px; height:50px" onclick="addTag(3), closePopup()"></td>
+                    <td> <img src="if.png" alt="" style="width:100px; height:50px" onclick="addTag(6), closePopup()"></td>
+                    <td><img src="for.png" alt="" style="width:100px; height:50px" onclick="addTag(5), closePopup()"></td>
+                </tr>
+                <tr>
+                    <td> <img src="assign.png" alt="" style="width:100px; height:50px" onclick="addTag(2), closePopup()" ></td>
+                    <td><img src="output.png" alt="" style="width:100px; height:50px" onclick="addTag(4), closePopup()"></td>
+                </tr>
+              </table>
+              <button type="button" onclick="closePopup()">Cancle</button>
+            
+            </div>
+
+
+
+            <div class="assign_popup" id="assign_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="assign.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p> <input   style="height:20px; width:200px;" placeholder="Variable" id="variable-name">  =  <input   style="height:200px; width:200px;" placeholder="Expression" id="value-assign"> </p>
+                </div>
+               
+               <button type="button" onclick="closeAssignPopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+            <div class="declare_popup" id="declare_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="declare.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p> <input   style="height:20px; width:200px;" placeholder="Variable" >  =  <input   style="height:200px; width:200px;" placeholder="Expression"> </p>
+                </div> 
+               <button type="button" onclick="closeDeclarePopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+
+
+
+            <div class="input_popup" id="input_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="input.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p> <input   style="height:40px; width:500px;" placeholder="Enter a Variable name" id="variable-name-assign"></p>
+                </div> 
+               <button type="button" onclick="closeInputPopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+
+
+
+            <div class="output_popup" id="output_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="output.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                     <input   style="height:230px; width:500px;" placeholder="Enter an Expression here">
+                </div> 
+               <button type="button" onclick="closeOutputPopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+
+            <div class="for_popup" id="for_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="for.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <p> <input   style="height:20px; width:200px;" placeholder="Variable">  =  <input   style="height:200px; width:200px;" placeholder="Expression"> </p>
+                </div> 
+               <button type="button" onclick="closeforPopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+            <div class="if_popup" id="if_popup">
+
+                <div style="height: 200px; width:500px; background-color: lightblue; margin-top: 20px;">
+                            <img src="if.png" alt="" style="width: 100px; height:50px;">
+
+                      <p  style="font-family:courier;"> <b>
+                        An Assignment Statement calculate an Expression and then stores the result in Variable 
+                      </b>
+                        </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                   <input   style="height:230px; width:500px;" placeholder="Enter a Conditional Expression here "> 
+                </div> 
+               <button type="button" onclick="closeifPopup()" style="height: 40px; width: 100px; ">ok</button>
+            </div>
+
+
+
+
+
+
+
+
+        
+    </div>
+    
+    
+</body>
+<script src="main.js"> </script>
+</html>
